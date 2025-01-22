@@ -20,4 +20,9 @@ module "vpc" {
         "kubernetes.io/role/internal-elb"    = 1
         "kubernetes.io/cluster/dev-demo"     = "owned"
     }
+
+    public_subnet_tags = {
+        "kubernetes.io/role/elb"             = 1
+        "kubernetes.io/cluster/dev-demo"     = "owned"
+    }
 }
